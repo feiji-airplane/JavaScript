@@ -62,7 +62,7 @@ jobs:
           git checkout FEIZAO
           npm install
       - name: '运行 【葫芦音乐】'
-        if: env.hlyyurl
+        if: env.HLYYURL
         run: |
           cd ~/JavaScript
           node hlyy.js
