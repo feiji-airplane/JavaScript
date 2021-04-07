@@ -43,8 +43,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        hlyyurl: ${{ secrets.hlyyurl }}
-        hlyyhd: ${{ secrets.hlyyhd }}
+        HLYYURL: ${{ secrets.HLYYURL }}
+        HLYYHD: ${{ secrets.HLYYHD }}
         
        
     steps:
@@ -56,7 +56,7 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.hlyyurl
+        if: env.HLYYURL
         run: |
           cd ~/JavaScript
           git checkout FEIZAO
